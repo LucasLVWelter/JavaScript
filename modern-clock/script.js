@@ -35,4 +35,4 @@ function hora() {
     campodata.innerHTML = `${dia}`
     campohora.innerHTML = `${hora}:${minuto}:${segundo}`
 }    
-setInterval(time,1000);
+setInterval(hora,1000);
