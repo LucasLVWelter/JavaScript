@@ -26,10 +26,7 @@ function finalizar() {
         for(c = 0; c <= (numeros.length - 1); c++) {
             soma += numeros[c]
         }
-        res.innerHTML += `<p>Ao todo, temos ${numeros.length} números cadastrados.</p>`
-        res.innerHTML += `<p>O maior valor informado foi ${numeros[numeros.length - 1]}.</p>`
-        res.innerHTML += `<p>O menor valor informado foi ${numeros[0]}.</p>`
-        res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
-        res.innerHTML += `<p>A média dos valores digitados é ${soma / numeros.length}`
+        var nsort = numeros.sort(function(a, b){return a - b})
+        res.innerHTML = `<p>Ao todo, temos ${numeros.length} números cadastrados.</p><p>O maior valor informado foi ${nsort[numeros.length -1]}.</p><p>O menor valor informado foi ${nsort[0]}.</p><p>Somando todos os valores, temos ${soma}.</p><p>A média dos valores digitados é ${soma / numeros.length}`
     }   
 }
